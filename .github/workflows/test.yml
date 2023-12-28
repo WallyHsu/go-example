@@ -16,7 +16,8 @@ jobs:
       with:
         go-version: ${{ matrix.go-version }}
         cache: false
-    - run: go test ./...
+    - run: cd outyet
+    - run: go test -v ./...
 
   test-cache:
     runs-on: ubuntu-latest
